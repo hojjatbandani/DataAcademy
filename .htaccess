@@ -1,0 +1,4 @@
+# Data Academy — serve index.html for folder URLs (e.g. /ar/) and never list folders
+DirectoryIndex index.html index.php
+Options -Indexes
+AddDefaultCharset UTF-8

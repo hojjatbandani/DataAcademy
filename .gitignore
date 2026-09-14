@@ -1,0 +1,9 @@
+# Runtime data written by contact.php
+storage/
+*.log
+
+# OS / editor files
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
