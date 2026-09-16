@@ -9,8 +9,7 @@ declare(strict_types=1);
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
 
-const RECIPIENT = 'team@thedatacademy.com';
-const CC        = 'data.academy20@gmail.com';
+const RECIPIENT = 'team@t4id.com';
 
 function fail(string $error, int $code = 400): void {
     http_response_code($code);
@@ -72,9 +71,8 @@ if (!is_dir($dir)) {
 // 2) Try to e-mail the team (requires a configured mail transport in php.ini / sendmail).
 $subject = '=?UTF-8?B?' . base64_encode('[Website] New enquiry from ' . $name) . '?=';
 $headers = implode("\r\n", [
-    'From: Data Academy Website <no-reply@thedatacademy.com>',
+    'From: Data Academy Website <no-reply@thedataacademy.com>',
     'Reply-To: ' . $name . ' <' . $email . '>',
-    'Cc: ' . CC,
     'MIME-Version: 1.0',
     'Content-Type: text/plain; charset=UTF-8',
     'X-Mailer: PHP/' . PHP_VERSION,

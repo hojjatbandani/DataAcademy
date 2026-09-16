@@ -104,6 +104,8 @@ html[lang="ar"] .eyebrow { letter-spacing: 0; font-size: .95rem; }
 .eyebrow::before { content: ""; width: 28px; height: 3px; border-radius: 3px; background: var(--orange-500); }
 .section--navy .eyebrow { color: #ffc774; }
 .section-head p { margin-top: 14px; }
+.section-note { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; padding: 8px 14px; border-radius: 999px; background: var(--orange-50); border: 1px solid var(--orange-100); color: var(--orange-700); font-size: .88rem; font-weight: 700; }
+.section-note svg { width: 16px; height: 16px; flex: none; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -203,12 +205,12 @@ html[lang="ar"] .brand__text small { letter-spacing: 0; }
 .hero__trust svg { width: 38px; height: 38px; color: var(--blue-600); flex: none; }
 .hero__trust strong { color: var(--ink); display: block; }
 
-.hero__visual { position: relative; min-height: 460px; }
-.hero__visual .ring { --ring-w: 26px; width: 300px; height: 300px; inset-inline-start: -90px; top: 30px; opacity: .9; }
-.hero__visual .blob { width: 420px; height: 420px; inset-inline-end: -120px; top: -60px; background: var(--blue-200); }
+.hero__visual { position: relative; width: 100%; max-width: 480px; margin-inline: auto; }
+.hero__visual .ring { --ring-w: 26px; width: 300px; height: 300px; inset-inline-start: -110px; bottom: -70px; opacity: .9; z-index: 1; }
+.hero__visual .blob { width: 420px; height: 420px; inset-inline-end: -140px; top: -80px; background: var(--blue-200); }
 .hero-card {
   position: relative; z-index: 2; background: #fff; border-radius: var(--radius-lg); padding: 26px 28px 28px;
-  box-shadow: var(--shadow-lg); border: 1px solid rgba(227, 234, 240, .8); max-width: 480px; margin-inline-start: auto;
+  box-shadow: var(--shadow-lg); border: 1px solid rgba(227, 234, 240, .8);
 }
 .hero-card__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
 .hero-card__tag { display: inline-block; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--blue-600); background: var(--blue-50); padding: 5px 10px; border-radius: 999px; }
@@ -238,13 +240,12 @@ html[lang="ar"] .bar { grid-template-columns: 120px 1fr 44px; }
 }
 .float-badge svg { width: 22px; height: 22px; color: var(--orange-500); }
 .float-badge small { display: block; font-weight: 600; color: var(--muted); font-size: .75rem; }
-.float-badge--a { inset-inline-start: -12px; bottom: -22px; }
-.float-badge--b { inset-inline-end: -28px; top: -30px; }
+.float-badge--a { inset-inline-start: -36px; bottom: -26px; }
+.float-badge--b { inset-inline-end: -36px; top: -28px; }
 
 @media (max-width: 960px) {
   .hero__grid { grid-template-columns: 1fr; }
-  .hero__visual { min-height: 0; margin-top: 12px; }
-  .hero-card { margin-inline: auto; }
+  .hero__visual { margin-top: 12px; }
   .hero__visual .ring { display: none; }
   .float-badge--b { top: -16px; inset-inline-end: 0; }
   .float-badge--a { bottom: -22px; inset-inline-start: 0; }
