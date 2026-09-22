@@ -76,6 +76,13 @@ AddDefaultCharset UTF-8
 #   RewriteRule ^ https://thedataacademy.com%{REQUEST_URI} [L,R=301]
 # </IfModule>
 
+# --- Clean URLs: /index.html -> /  and  /ar/index.html -> /ar/ ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{THE_REQUEST} \\s/(.*/)?index\\.html[\\s?] [NC]
+  RewriteRule ^(.*/)?index\\.html$ /%1 [R=301,L]
+</IfModule>
+
 # --- Compression ---
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json image/svg+xml

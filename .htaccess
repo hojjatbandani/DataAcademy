@@ -2,3 +2,10 @@
 DirectoryIndex index.html index.php
 Options -Indexes
 AddDefaultCharset UTF-8
+
+# Clean URLs: /index.html -> /  and  /ar/index.html -> /ar/
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{THE_REQUEST} \s/(.*/)?index\.html[\s?] [NC]
+  RewriteRule ^(.*/)?index\.html$ /%1 [R=301,L]
+</IfModule>
