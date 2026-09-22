@@ -1,5 +1,6 @@
 # Runtime data written by contact.php
 storage/
+academy-private/
 *.log
 
 # OS / editor files
@@ -11,3 +12,6 @@ Thumbs.db
 # Build output (node build.js)
 dist/
 Academy-build-*.zip
+
+# Contact form secrets / runtime data
+config.local.php

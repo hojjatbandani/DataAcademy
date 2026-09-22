@@ -23,6 +23,8 @@ const FILES = [
   'index.html',
   'ar/index.html',
   'contact.php',
+  'config.php',
+  ...(fs.existsSync(path.join(__dirname, 'config.local.php')) ? ['config.local.php'] : []), // mailbox password, git-ignored
   'assets/css/style.css',
   'assets/js/main.js',
   'assets/img/logo.png',
@@ -73,7 +75,7 @@ AddDefaultCharset UTF-8
 #   RewriteEngine On
 #   RewriteCond %{HTTPS} off [OR]
 #   RewriteCond %{HTTP_HOST} ^www\. [NC]
-#   RewriteRule ^ https://thedataacademy.com%{REQUEST_URI} [L,R=301]
+#   RewriteRule ^ https://thedatacademy.com%{REQUEST_URI} [L,R=301]
 # </IfModule>
 
 # --- Clean URLs: /index.html -> /  and  /ar/index.html -> /ar/ ---
