@@ -207,7 +207,7 @@
           }
         })
         .catch(function () {
-          status.textContent = msgs.error || 'We could not send your request right now. Please email team@thedatacademy.com or call us.';
+          status.textContent = msgs.error || 'We could not send your request right now. Please email team@t4id.com or call us.';
           status.classList.add('is-err');
         })
         .finally(function () {

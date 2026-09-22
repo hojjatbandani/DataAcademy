@@ -7,3 +7,7 @@ Thumbs.db
 .DS_Store
 .vscode/
 .idea/
+
+# Build output (node build.js)
+dist/
+Academy-build-*.zip
