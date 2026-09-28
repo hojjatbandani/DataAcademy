@@ -14,7 +14,7 @@ declare(strict_types=1);
 
 $config = [
     // Where enquiries are delivered. Add more addresses to the array if needed.
-    'recipients' => ['info@thedatacademy.com'],
+    'recipients' => ['team@t4id.com'],
 
     // Sender identity. Must be a mailbox on the site's own domain or the host will reject/spam-flag it.
     'from_email' => 'info@thedatacademy.com',
